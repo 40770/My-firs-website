@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WebProgress Sayti</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<style type="text/css">	
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+			box-sizing: border-box;
+		}
+		footer {
+			background: #520;
+		}
+		.row {
+			display: flex;
+			padding: 50px;
+		}
+		footer h1 {
+			color: #999;
+			text-transform: uppercase;
+			font-family: 'Arial';
+			padding: 20px;
+		}
+		footer ul li a {
+			color: white;
+			font-family: 'Arial';
+			font-size: 20px;
+			transition: 1s;
+			padding: 5px;
+			margin-bottom: 2px;
+		}
+		footer ul li a:hover {
+			color: red;
+			padding-left: 40px;
+		}
+		footer ul {
+			margin-left: 50px;
+		}
+		.footer-col {
+			width: 25%;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			background: #999;
+			font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+		}
+		.column {
+			width: 32%;
+			float: left;
+			margin: 8px;
+			cursor: pointer;
+			background: #deed;
+			border-bottom: 2px solid white;
+		}
+		.column2 {
+			width: 32%;
+			float: left;
+			margin: 8px;
+			cursor: pointer;
+			background: #edde;
+			border-bottom: 2px solid white;
+		}
+		.hammasi {
+			background: #777;
+		}
+		.img {
+			width: 100%;
+			height: 300px;
+		}
+		.column2,
+		.column > p {
+			text-align: center;
+			font-size: 20px;
+		}
+		header > a {
+			color: white;
+			float: left;
+			padding: 20px 25px;
+			font-family: cursive;
+			display: flex;
+			text-decoration: none;
+		}
+		header > a:hover {
+			background: #865;
+		}
+		.header {
+			display: flex;
+			justify-content: space-between;
+			background: url(image1000.jpg);
+			width: 100%;
+			height: 100vh;
+		}
+		.header ul li a {
+			color: white;
+			text-decoration: none;
+			display: block;
+			padding: 20px 25px;
+			font-size: 20px;
+		}
+		.header ul li a:hover {
+			color: yellow;
+		}
+		.header ul {
+			list-style: none;
+			display: flex;
+			margin-right: 100px;
+		}
+		.clear {
+			clear: both;
+		}
+		.header h1 {
+			color: #ded;
+			margin-left: 100px;
+		}
+		label #btn,
+		label #cancel {
+			color: white;
+			font-size: 30px;
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			cursor: pointer;
+			display: none;
+		}
+		#check {
+			display: none;
+		}
+
+		@media(max-width:800px) {
+			label #btn {
+				display: block;
+			}
+			.header ul {
+				width: 200px;
+				height: 100vh;
+				background: #333;
+				display: block;
+				transition: 1s;
+				position: fixed;
+				top: 0;
+				right: -100%;
+			}
+			.header ul li a:hover {
+				color: red;
+				margin-left: 20px;
+				transition: 1s;
+			}
+			#check:checked ~ ul {
+				right: -150px;
+			}
+			#check:checked ~ label #btn {
+				display: none;
+			}
+			#check:checked ~ label #cancel {
+				display: block;
+				z-index: 1;
+			}
+			#rasm1 {
+				width: 100%;
+				height: 100px;
+			}
+		}
+		.yordam{
+			padding: 50px 200px;
+			width: 100%;
+			background: #ddea;
+		}
+		.yordam>h1{
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		.yordam>p{
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		.yordam_text{
+			width: 100%;
+			display: flex;
+			margin-bottom: 50px;
+		}
+		.yordam_col {
+			border-right: 2px solid black;
+			padding-left: 20px;
+		}
+		.yordam_col3{
+			border: 0;
+		}
+	</style>
+</head>
+<body>	
+
+<header>
+	<div class="header">
+		<div class="logo">
+			<h1>WEBPROGRESS</h1>
+		</div>
+		<input type="checkbox" id="check" name="">
+		<label for="check">
+			<i class='bx bx-menu' id="btn"></i>
+			<i class='bx bx-x' id="cancel"></i>
+		</label>
+		<ul>
+			<li><a href="" style="float: left;">Home</a></li>
+			<li><a href="https://webprogress.uz/" style="float: left;">About</a></li>
+			<li><a href="https://webprogress.uz/" style="float: left;">Contact</a></li>
+			<li><a href="https://webprogress.uz/" style="float: left;">News</a></li>
+			<li><a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsignup%3Fref_cta%3DSign%2Bup%26ref_loc%3Dheader%2Blogged%2Bout%26ref_page%3D%252F%26source%3Dheader-home" style="float: left;">Login for create website</a></li>
+		</ul>
+	</div>
+</header>
+
+<div class="hammasi">
+	<div class="column">
+		<img src="image13.jpg" class="img">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+<div class="column">
+	<img src="image14.jpg" class="img">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="column">
+	<img src="image4.jpg" class="img">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="column2">
+	<img src="image6.jpg" class="img">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="column2">
+	<img src="image15.jpg" class="img">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="column2">
+	<img src="image16.jpg" class="img">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+
+<div class="clear"></div>
+
+<div class="yordam">
+	<h1>Yordam</h1>
+	<p>Webprogress.uz sayti siz uchun sifatli, qulay va hamyonbop narxlardagi darslarni taqdim etadi</p>
+	<div class="yordam_text">
+		<div class="yordam_col">
+			<h2>Sizni yoqtirgan kurslarni toping!</h2>
+			<p>Berilgan barcha kurslarni ko'rib chiqing. Webprogress.uz keng qamrovli bo'lib, sizni qiziqtirgan va kerakli kurslarni albatta topa olasiz.</p>
+			<a href="https://webprogress.uz/#portfolio">Webprogress kurslari</a>
+		</div>
+		<div class="yordam_col">
+			<h2>Biz bilan bog'laning!</h2>
+			<p>Darslarga qatnashmoqchi va kurslarni sotib olmoqchi bo'lsangiz quyidagi so'rovnomani to'ldiring yoki +998943441929 raqamiga telefon qiling!!!</p>
+			<a href="https://webprogress.uz/#contact">Biz bilan bog'lanish uchun bosing.</a>
+		</div>
+		<div class="yordam_col yordam_col3">
+			<h2>Ko'proq ma'lumot uchun Login qiling!</h2>
+			<p>Bu sizga biz haqimizda yanada ko'proq ma'lumot beradi hamda kurslar va o'qituvchilar haqida ko'proq ma'lumotga ega bo'lasiz</p>
+			<a href="https://webprogress.uz/#login">Login</a>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="footer-col">
+				<h1>Company</h1>
+				<ul>
+					<li><a href="https://yandex.ru">Yandex</a></li>
+					<li><a href="https://facebook.com">Facebook</a></li>
+					<li><a href="https://google.com">Google</a></li>
+					<li><a href="https://telegram.org">Telegram</a></li>
+					<li><a href="https://instagram.com">Instagram</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h1>Fabrika</h1>
+				<ul>
+					<li><a href="https://uz.wikipedia.org/wiki/Shokolad">Shokolad</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/Pechenie">Pechenie</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/Ichimliklar">Ichimliklar</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/Shirinliklar">Shirinliklar</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/Tortlar">Tortlar</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h1>Texnalogiyalar</h1>
+				<ul>
+					<li><a href="https://uz.wikipedia.org/wiki/Telefon">Telefon</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/Noutbuk">Noutbuk</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/Kompyuter">Kompyuter</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/Televizor">Televizor</a></li>
+					<li><a href="https://uz.wikipedia.org/wiki/printer">Printer</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
